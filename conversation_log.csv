@@ -1,0 +1,15 @@
+actor,message,tool_call,timestamp
+user,we just received 50 Kg Choclate powder,,2026-10-20T01:01:39.992899+00:00
+agent,{},list_inventory,2026-10-20T01:01:40.481270+00:00
+tool,"{""ok"": true, ""status_code"": 200, ""data"": [{""id"": 1, ""name"": ""Oat Milk"", ""quantity"": 24.0, ""unit"": ""units""}, {""id"": 2, ""name"": ""Arabica Coffee Beans"", ""quantity"": 18.0, ""unit"": ""bags""}, {""id"": 3, ""name"": ""Paper Cups"", ""quantity"": 8.0, ""unit"": ""boxes""}, {""id"": 4, ""name"": ""Vanilla Syrup"", ""quantity"": 6.0, ""unit"": ""bottles""}, {""id"": 5, ""name"": ""Cocoa Powder"", ""quantity"": 12.0, ""unit"": ""kg""}, {""id"": 6, ""name"": ""Cold Brew Concentrate"", ""quantity"": 9.0, ""unit"": ""liters""}, {""id"": 7, ""name"": ""oats milk"", ""quantity"": 20.0, ""unit"": ""bottles""}]}",list_inventory,2026-10-20T01:01:40.487961+00:00
+agent,"{""delta"": 50, ""product_id"": 5}",update_stock,2026-10-20T01:01:40.888048+00:00
+tool,"{""ok"": true, ""status_code"": 200, ""data"": {""id"": 5, ""name"": ""Cocoa Powder"", ""quantity"": 62.0, ""unit"": ""kg""}}",update_stock,2026-10-20T01:01:40.892769+00:00
+agent,Chocolate powder (Cocoa Powder) is now 62 kg in stock.,,2026-10-20T01:01:41.188123+00:00
+user,Increase Vanilla 10 bottles,,2026-10-20T01:03:33.896719+00:00
+agent,"{""delta"": 10, ""product_id"": 4}",update_stock,2026-10-20T01:03:34.201159+00:00
+tool,"{""ok"": true, ""status_code"": 200, ""data"": {""id"": 4, ""name"": ""Vanilla Syrup"", ""quantity"": 16.0, ""unit"": ""bottles""}}",update_stock,2026-10-20T01:03:34.204842+00:00
+agent,Vanilla Syrup is now 16 bottles in stock.,,2026-10-20T01:03:34.445140+00:00
+user,Remove 5 Paper Cups,,2026-10-20T01:04:03.871554+00:00
+agent,"{""delta"": -5, ""product_id"": 3}",update_stock,2026-10-20T01:04:04.288919+00:00
+tool,"{""ok"": true, ""status_code"": 200, ""data"": {""id"": 3, ""name"": ""Paper Cups"", ""quantity"": 3.0, ""unit"": ""boxes""}}",update_stock,2026-10-20T01:04:04.292544+00:00
+agent,Paper Cups decreased to 3 boxes in stock.,,2026-10-20T01:04:04.518771+00:00
